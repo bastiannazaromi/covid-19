@@ -174,7 +174,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                          <th rowspan="2">Konrimasi</th>
+                                          <th rowspan="2">Konfirmasi</th>
                                           <td>Total Kasus</td>
                                           <td>Sembuh</td>
                                           <td>Meninggal</td>
@@ -515,7 +515,7 @@
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fab fa-sourcetree fa-3x mb-3"></i>
-                        <p><a href="https://api.kawalcorona.com" target="_blank">api.kawalcorona.com</a> , <a href="https://covid19.mathdro.id" target="_blank">covid19.mathdro.id</a> , , <a href="http://api-corona-brebes.herokuapp.com/" target="_blank">api-corona-brebes.herokuapp.com/</a></p>
+                        <p><a href="https://api.kawalcorona.com" target="_blank">api.kawalcorona.com</a> , <a href="https://covid19.mathdro.id" target="_blank">covid19.mathdro.id</a> , <a href="http://api-corona-brebes.herokuapp.com/" target="_blank">api-corona-brebes.herokuapp.com/</a></p>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3"></i
