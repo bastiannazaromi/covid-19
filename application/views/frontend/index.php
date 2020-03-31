@@ -40,9 +40,10 @@
                 <a class="navbar-brand js-scroll-trigger text-light" href="#page-top">MAY KOMPUTER</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#indonesia">Indonesia</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#global">Global</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#about">About</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#brebes">Brebes</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#indonesia">Indonesia</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#global">Global</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#about">About</a></li>
                     </ul>
                 </div>
             </div>
@@ -57,6 +58,163 @@
                 </div>
             </div>
         </div>
+
+        <section class="page-section bg-light" id="brebes">
+            <div class="container">
+                <h1 class="text-center mt-0">Total Kasus di Brebes</h1>
+                <hr class="divider my-4" />
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <h5 class="card-title text-uppercase mb-0">Positif</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['konfirmasi']['total_kasus']) ;?></span>
+                            </div>
+                            <div class="col-auto">
+                              <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                <i class="fas fa-briefcase-medical"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <h5 class="card-title text-uppercase mb-0">ODP</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['odp']['total_odp']) ;?></span>
+                            </div>
+                            <div class="col-auto">
+                              <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                <i class="fas fa-eye"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <h5 class="card-title text-uppercase mb-0">PDP</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['pdp']['total_pdp']) ;?></span>
+                            </div>
+                            <div class="col-auto">
+                              <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                                <i class="fas fa-ambulance"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <h5 class="card-title text-uppercase mb-0">Update Terakhir</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= $brebes['diperbaharui'] ;?></span>
+                            </div>
+                            <div class="col-auto">
+                              <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                <i class="far fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+            </div>
+        </section>
+
+        <section class="page-section mt-5" id="detail-brebes">
+            <div class="container">
+                <h1 class="text-center mt+3">Detail Kasus di Brebes</h1>
+                <hr class="divider my-4" />
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header bg-transparent">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-bordered align-items-center text-center" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr class="table table-warning">
+                                            <th>Status</th>
+                                            <th colspan="3">Keterangan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                          <th rowspan="2">Konrimasi</th>
+                                          <td>Total Kasus</td>
+                                          <td>Sembuh</td>
+                                          <td>Meninggal</td>
+                                        </tr>
+                                        <tr>
+                                          <td><?= $brebes['konfirmasi']['total_kasus'] ; ?></td>
+                                          <td><?= $brebes['konfirmasi']['sembuh'] ; ?></td>
+                                          <td><?= $brebes['konfirmasi']['meniggal'] ; ?></td>
+                                        </tr>
+                                        <tr>
+                                          <th rowspan="2">ODP</th>
+                                          <td>Total ODP</td>
+                                          <td>Dalam Pemantauan</td>
+                                          <td>Selesai Pemantauan</td>
+                                        </tr>
+                                        <tr>
+                                          <td><?= $brebes['odp']['total_odp'] ; ?></td>
+                                          <td><?= $brebes['odp']['dalam_pemantauan'] ; ?></td>
+                                          <td><?= $brebes['odp']['selesai_pemantauan'] ; ?></td>
+                                        </tr>
+                                        <tr>
+                                          <th rowspan="2">PDP</th>
+                                          <td>Total PDP</td>
+                                          <td>Dirawat</td>
+                                          <td>Pulang</td>
+                                        </tr>
+                                        <tr>
+                                          <td><?= $brebes['pdp']['total_pdp'] ; ?></td>
+                                          <td><?= $brebes['pdp']['dirawat'] ; ?></td>
+                                          <td><?= $brebes['pdp']['pulang'] ; ?></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!-- Services section-->
         <section class="page-section bg-light" id="indonesia">
@@ -70,8 +228,8 @@
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Positif</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= $positif ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Positif</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= $positif ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -81,7 +239,7 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-ind" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-ind" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
                           </p>
                         </div>
                       </div>
@@ -92,8 +250,8 @@
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Sembuh</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= number_format($sembuh) ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Sembuh</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($sembuh) ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -103,7 +261,7 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-ind" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-ind" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
                           </p>
                         </div>
                       </div>
@@ -114,8 +272,8 @@
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Meninggal</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= number_format($meninggal) ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Meninggal</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($meninggal) ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -125,7 +283,7 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-ind" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-ind" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
                           </p>
                         </div>
                       </div>
@@ -136,12 +294,12 @@
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Jam</h5>
-                              <span class="h2 font-weight-bold mb-0" id="jam"></span>
-                              <span class="h2 font-weight-bold mb-0">:</span>
-                              <span class="h2 font-weight-bold mb-0" id="menit"></span>
-                              <span class="h2 font-weight-bold mb-0">:</span>
-                              <span class="h2 font-weight-bold mb-0" id="detik"></span>
+                              <h5 class="card-title text-uppercase mb-0">Jam</h5>
+                              <span class="h3 font-weight-bold mb-0" id="jam"></span>
+                              <span class="h3 font-weight-bold mb-0">:</span>
+                              <span class="h3 font-weight-bold mb-0" id="menit"></span>
+                              <span class="h3 font-weight-bold mb-0">:</span>
+                              <span class="h3 font-weight-bold mb-0" id="detik"></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
@@ -206,14 +364,14 @@
                 <h1 class="text-center mt-0">Total Kasus Seluruh Dunia</h1>
                 <hr class="divider my-4" />
                 <div class="row">
-                    <div class="col-xl-4 col-md-6">
+                    <div class="col-xl-3 col-md-6">
                       <div class="card card-stats">
                         <!-- Card body -->
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Positif</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= number_format($confirmed) ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Positif</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($confirmed) ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
@@ -223,19 +381,19 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-dunia" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-dunia" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6">
+                    <div class="col-xl-3 col-md-6">
                       <div class="card card-stats">
                         <!-- Card body -->
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Sembuh</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= number_format($recovered) ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Sembuh</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($recovered) ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -245,19 +403,19 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-dunia" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-dunia" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-4 col-md-6">
+                    <div class="col-xl-3 col-md-6">
                       <div class="card card-stats">
                         <!-- Card body -->
                         <div class="card-body">
                           <div class="row">
                             <div class="col">
-                              <h5 class="card-title text-uppercase text-muted mb-0">Meninggal</h5>
-                              <span class="h2 font-weight-bold mb-0"><?= number_format($deaths) ;?></span>
+                              <h5 class="card-title text-uppercase mb-0">Meninggal</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= number_format($deaths) ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -267,7 +425,28 @@
                           </div>
                           <p class="mt-3 mb-0 text-sm">
                             <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-dunia" ><span class="text-nowrap">Detail</span></a>
+                            <a href="#detail-dunia" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                      <div class="card card-stats">
+                        <!-- Card body -->
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col">
+                              <h5 class="card-title text-uppercase mb-0">Update Terakhir</h5>
+                              <span class="h3 font-weight-bold mb-0"><?= $update_dunia ;?></span>
+                            </div>
+                            <div class="col-auto">
+                              <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                                <i class="far fa-clock"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <p class="mt-3 mb-0 text-sm">
+                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
                           </p>
                         </div>
                       </div>
