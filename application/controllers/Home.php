@@ -40,9 +40,6 @@ class Home extends CI_Controller {
 		$time = strtotime($lastUpdateDunia);
 		$data['update_dunia'] = date('d-m-Y', $time);
 
-		$result5 = $this->get_curl('http://api-corona-brebes.herokuapp.com/');
-		$data['brebes'] = $result5;
-
 		$data['title'] = "MAY - Pantau Covid-19";
 		$this->load->view('frontend/index.php', $data, FALSE);
 	}
