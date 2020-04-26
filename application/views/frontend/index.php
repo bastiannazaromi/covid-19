@@ -40,7 +40,6 @@
                 <a class="navbar-brand js-scroll-trigger text-light" href="#page-top">MAY KOMPUTER</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#brebes">Brebes</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#indonesia">Indonesia</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#global">Global</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="#about">About</a></li>
@@ -59,167 +58,10 @@
             </div>
         </div>
 
-        <section class="page-section bg-light" id="brebes">
-            <div class="container">
-                <h1 class="text-center mt-0">Total Kasus di Brebes</h1>
-                <hr class="divider my-4" />
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                      <div class="card card-stats">
-                        <!-- Card body -->
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col">
-                              <h5 class="card-title text-uppercase mb-0">Positif</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['konfirmasi']['total_kasus']) ;?></span>
-                            </div>
-                            <div class="col-auto">
-                              <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                                <i class="fas fa-briefcase-medical"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                      <div class="card card-stats">
-                        <!-- Card body -->
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col">
-                              <h5 class="card-title text-uppercase mb-0">ODP</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['odp']['total_odp']) ;?></span>
-                            </div>
-                            <div class="col-auto">
-                              <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                <i class="fas fa-eye"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                      <div class="card card-stats">
-                        <!-- Card body -->
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col">
-                              <h5 class="card-title text-uppercase mb-0">PDP</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= number_format($brebes['pdp']['total_pdp']) ;?></span>
-                            </div>
-                            <div class="col-auto">
-                              <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
-                                <i class="fas fa-ambulance"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                            <a href="#detail-brebes" class="js-scroll-trigger"><span class="text-nowrap">Detail</span></a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                      <div class="card card-stats">
-                        <!-- Card body -->
-                        <div class="card-body">
-                          <div class="row">
-                            <div class="col">
-                              <h5 class="card-title text-uppercase mb-0">Update Terakhir</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= $brebes['diperbaharui'] ;?></span>
-                            </div>
-                            <div class="col-auto">
-                              <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
-                                <i class="far fa-clock"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <p class="mt-3 mb-0 text-sm">
-                            <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  </div>
-            </div>
-        </section>
-
-        <section class="page-section mt-5" id="detail-brebes">
-            <div class="container">
-                <h1 class="text-center mt+3">Detail Kasus di Brebes</h1>
-                <hr class="divider my-4" />
-                <div class="row">
-                    <div class="col">
-                        <div class="card">
-                            <div class="card-header bg-transparent">
-                            <div class="table-responsive">
-                                <table class="table table-hover table-bordered align-items-center text-center" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr class="table table-warning">
-                                            <th>Status</th>
-                                            <th colspan="3">Keterangan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                          <th rowspan="2">Konfirmasi</th>
-                                          <td>Total Kasus</td>
-                                          <td>Sembuh</td>
-                                          <td>Meninggal</td>
-                                        </tr>
-                                        <tr>
-                                          <td><?= $brebes['konfirmasi']['total_kasus'] ; ?></td>
-                                          <td><?= $brebes['konfirmasi']['sembuh'] ; ?></td>
-                                          <td><?= $brebes['konfirmasi']['meniggal'] ; ?></td>
-                                        </tr>
-                                        <tr>
-                                          <th rowspan="2">ODP</th>
-                                          <td>Total ODP</td>
-                                          <td>Dalam Pemantauan</td>
-                                          <td>Selesai Pemantauan</td>
-                                        </tr>
-                                        <tr>
-                                          <td><?= $brebes['odp']['total_odp'] ; ?></td>
-                                          <td><?= $brebes['odp']['dalam_pemantauan'] ; ?></td>
-                                          <td><?= $brebes['odp']['selesai_pemantauan'] ; ?></td>
-                                        </tr>
-                                        <tr>
-                                          <th rowspan="2">PDP</th>
-                                          <td>Total PDP</td>
-                                          <td>Dirawat</td>
-                                          <td>Pulang</td>
-                                        </tr>
-                                        <tr>
-                                          <td><?= $brebes['pdp']['total_pdp'] ; ?></td>
-                                          <td><?= $brebes['pdp']['dirawat'] ; ?></td>
-                                          <td><?= $brebes['pdp']['pulang'] ; ?></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- Services section-->
-        <section class="page-section bg-light" id="indonesia">
+        <section class="bg-light py-5 mb-4" id="indonesia">
             <div class="container">
-                <h1 class="text-center mt-0">Total Kasus di Indonesia</h1>
+                <h1 class="text-center">Total Kasus di Indonesia</h1>
                 <hr class="divider my-4" />
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
@@ -251,7 +93,7 @@
                           <div class="row">
                             <div class="col">
                               <h5 class="card-title text-uppercase mb-0">Sembuh</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= number_format($sembuh) ;?></span>
+                              <span class="h3 font-weight-bold mb-0"><?= $sembuh ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -273,7 +115,7 @@
                           <div class="row">
                             <div class="col">
                               <h5 class="card-title text-uppercase mb-0">Meninggal</h5>
-                              <span class="h3 font-weight-bold mb-0"><?= number_format($meninggal) ;?></span>
+                              <span class="h3 font-weight-bold mb-0"><?= $meninggal ;?></span>
                             </div>
                             <div class="col-auto">
                               <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -319,7 +161,7 @@
             </div>
         </section>
 
-        <section class="page-section mt-5" id="detail-ind">
+        <section class="mt-5" id="detail-ind">
             <div class="container">
                 <h1 class="text-center mt+3">Detail Kasus di Indonesia</h1>
                 <hr class="divider my-4" />
@@ -359,7 +201,7 @@
             </div>
         </section>
 
-        <section class="page-section bg-light" id="global">
+        <section class="bg-light  py-5 mb-4" id="global">
             <div class="container">
                 <h1 class="text-center mt-0">Total Kasus Seluruh Dunia</h1>
                 <hr class="divider my-4" />
@@ -456,7 +298,7 @@
             </div>
         </section>
 
-        <section class="page-section mt-5" id="detail-dunia">
+        <section class="mt-5" id="detail-dunia">
             <div class="container">
                 <h1 class="text-center mt+3">Detail Kasus Seluruh Dunia</h1>
                 <hr class="divider my-4" />
@@ -497,7 +339,7 @@
         </section>
 
         <!-- Contact section-->
-        <section class="page-section bg-light" id="about">
+        <section class="bg-light py-5 mb-4" id="about">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 text-center">
@@ -513,11 +355,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <div class="col-lg-6 ml-auto text-center mb-5 mb-lg-0">
                         <i class="fab fa-sourcetree fa-3x mb-3"></i>
-                        <p><a href="https://api.kawalcorona.com" target="_blank">api.kawalcorona.com</a> , <a href="https://covid19.mathdro.id" target="_blank">covid19.mathdro.id</a> , <a href="http://api-corona-brebes.herokuapp.com/" target="_blank">api-corona-brebes.herokuapp.com/</a></p>
+                        <p><a href="https://api.kawalcorona.com" target="_blank">api.kawalcorona.com</a> , <a href="https://covid19.mathdro.id" target="_blank">covid19.mathdro.id</a></p>
                     </div>
-                    <div class="col-lg-4 mr-auto text-center">
+                    <div class="col-lg-6 mr-auto text-center">
                         <i class="fas fa-envelope fa-3x mb-3"></i
                         ><p>bastian.nazaromi@gmail.com</p>
                     </div>
